@@ -1,0 +1,42 @@
+/* 暖白 + 珊瑚橙。和前面几个刻意区分：
+   智能健身是冷调近黑，这个是暖调浅色，气质完全不同。 */
+page {
+  background: #faf7f2;
+  color: #221d18;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+view, text {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 0 28rpx 40rpx;
+}
+
+.sec {
+  display: flex;
+  align-items: baseline;
+  margin: 40rpx 0 18rpx;
+}
+.sec-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+  color: #221d18;
+}
+.sec-more {
+  margin-left: auto;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 28rpx;
+  margin-bottom: 18rpx;
+  box-shadow: 0 4rpx 16rpx rgba(120, 100, 70, 0.06);
+}
