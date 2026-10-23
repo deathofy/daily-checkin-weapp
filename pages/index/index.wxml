@@ -1,0 +1,95 @@
+<view class="page">
+
+  <view class="hero">
+    <view class="hero-date">{{dateLabel}}</view>
+    <view class="hero-mid">
+      <text class="prog-n">{{doneCount}}</text>
+      <text class="prog-t">/ {{total}}</text>
+      <text class="prog-l">今天已完成</text>
+    </view>
+    <view class="bar">
+      <view class="bar-in" style="width:{{pct}}%"></view>
+    </view>
+
+    <!-- 累计统计：进度条只回答「今天做了没」，这三个数回答「我坚持了多久」 -->
+    <view class="cum" wx:if="{{total > 0}}">
+      <text class="cum-i">累计打卡 <text class="cum-n">{{stats.totalCheckins}}</text> 次</text>
+      <text class="cum-dot">·</text>
+      <text class="cum-i">最长连续 <text class="cum-n">{{stats.bestStreak}}</text> 天</text>
+      <text class="cum-dot">·</text>
+      <text class="cum-i">活跃 <text class="cum-n">{{stats.activeDays}}</text> 天</text>
+    </view>
+    <!-- 这几个数最容易被当成真实个人数据，所以要标一句 -->
+    <view class="cum-note" wx:if="{{total > 0}}">首次使用的示例记录 · 之后的打卡都是真实的</view>
+  </view>
+
+  <!-- 本周：一眼看出这周断了没有 -->
+  <view class="card week" wx:if="{{total > 0}}">
+    <view class="wk" wx:for="{{week}}" wx:key="key">
+      <text class="wk-d">{{item.wd}}</text>
+      <view class="wk-c {{item.done ? 'on' : ''}} {{item.full ? 'full' : ''}} {{item.isToday ? 'today' : ''}}"></view>
+    </view>
+  </view>
+
+  <view class="empty" wx:if="{{total === 0}}">
+    <view class="empty-t">还没有习惯</view>
+    <view class="empty-s">去「习惯」页挑几个，或者从推荐里一键添加</view>
+    <view class="empty-btn" bindtap="toHabits">去添加</view>
+  </view>
+
+  <view class="list">
+    <view class="habit {{item.done ? 'done' : ''}}"
+          wx:for="{{board}}" wx:key="id"
+          data-id="{{item.id}}" bindtap="toggle">
+      <view class="h-icon" style="background:{{item.color}}">{{item.icon}}</view>
+      <view class="h-body">
+        <view class="h-name">{{item.name}}</view>
+        <view class="h-streak">
+          <text wx:if="{{item.streak > 0}}">连续 {{item.streak}} 天</text>
+          <text wx:else>今天开始</text>
+        </view>
+      </view>
+      <view class="h-check {{item.done ? 'on' : ''}}">{{item.done ? '✓' : ''}}</view>
+    </view>
+  </view>
+
+  <!-- 成就：已拿到的徽章 + 下一个最近的进度 -->
+  <block wx:if="{{total > 0}}">
+    <view class="sec">
+      <text class="sec-title">成就</text>
+      <text class="sec-more">已解锁 {{badges.length + moreCount}} 个</text>
+    </view>
+
+    <view class="card ach">
+      <view class="ach-row" wx:if="{{badges.length > 0}}">
+        <view class="badge" wx:for="{{badges}}" wx:key="id">
+          <text class="badge-i">{{item.icon}}</text>
+          <text class="badge-n">{{item.name}}</text>
+        </view>
+        <view class="badge more" wx:if="{{moreCount > 0}}">
+          <text class="badge-i">+{{moreCount}}</text>
+        </view>
+      </view>
+      <view class="ach-none" wx:else>还没有解锁成就，今天打一次卡就有了</view>
+
+      <!-- 「再坚持两天就能拿到」比列一堆已解锁的徽章更有推动力 -->
+      <view class="next" wx:if="{{next}}">
+        <view class="next-top">
+          <text class="next-i">{{next.icon}}</text>
+          <text class="next-n">{{next.name}}</text>
+          <text class="next-p">{{next.progress}} / {{next.target}}</text>
+        </view>
+        <view class="next-bar">
+          <view class="next-in" style="width:{{next.pct}}%"></view>
+        </view>
+        <view class="next-d">{{next.desc}}</view>
+      </view>
+      <view class="next-done" wx:else>全部成就已解锁，厉害</view>
+    </view>
+  </block>
+
+  <view class="tip" wx:if="{{total > 0}}">
+    点一下卡片就是打卡，再点一下取消。
+  </view>
+
+</view>

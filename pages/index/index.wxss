@@ -1,0 +1,286 @@
+.page {
+  padding: 0 28rpx 40rpx;
+}
+
+/* 顶部进度 */
+.hero {
+  padding: 44rpx 8rpx 34rpx;
+}
+.hero-date {
+  font-size: 24rpx;
+  color: #a89e8f;
+  letter-spacing: 2rpx;
+}
+.hero-mid {
+  margin-top: 18rpx;
+  display: flex;
+  align-items: baseline;
+}
+.prog-n {
+  font-size: 84rpx;
+  font-weight: 700;
+  color: #e8674a;
+  line-height: 1;
+}
+.prog-t {
+  font-size: 32rpx;
+  color: #c4b8a6;
+  margin-left: 6rpx;
+}
+.prog-l {
+  margin-left: auto;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
+.bar {
+  margin-top: 26rpx;
+  height: 14rpx;
+  background: #efe8dd;
+  border-radius: 7rpx;
+  overflow: hidden;
+}
+.bar-in {
+  height: 100%;
+  background: #e8674a;
+  border-radius: 7rpx;
+  transition: width 0.25s ease;
+}
+
+/* 累计统计 */
+.cum {
+  margin-top: 24rpx;
+  font-size: 22rpx;
+  color: #a89e8f;
+}
+.cum-n {
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #221d18;
+}
+.cum-dot {
+  margin: 0 12rpx;
+  color: #d8cfc0;
+}
+.cum-note {
+  margin-top: 10rpx;
+  font-size: 19rpx;
+  color: #c4b8a6;
+}
+
+/* 本周条 */
+.week {
+  display: flex;
+  justify-content: space-between;
+  padding: 24rpx 20rpx;
+}
+.wk {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wk-d {
+  font-size: 20rpx;
+  color: #b8ad9d;
+}
+.wk-c {
+  margin-top: 12rpx;
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 50%;
+  background: #efe8dd;
+}
+.wk-c.on {
+  background: #f0b8a6;
+}
+/* 全勤那天加深——一天做了几件和一件不落地做完，值得分开看 */
+.wk-c.full {
+  background: #e8674a;
+}
+.wk-c.today {
+  box-shadow: 0 0 0 5rpx rgba(232, 103, 74, 0.18);
+}
+
+/* 成就 */
+.ach-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.badge {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+.badge-i {
+  width: 76rpx;
+  height: 76rpx;
+  border-radius: 50%;
+  background: #fff1ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+}
+.badge-n {
+  margin-top: 10rpx;
+  font-size: 19rpx;
+  color: #a89e8f;
+  text-align: center;
+}
+.badge.more .badge-i {
+  background: #f2ede4;
+  font-size: 24rpx;
+  color: #a89e8f;
+}
+
+.ach-none {
+  font-size: 23rpx;
+  color: #a89e8f;
+  padding: 6rpx 0 4rpx;
+}
+
+.next {
+  margin-top: 22rpx;
+  padding-top: 22rpx;
+  border-top: 1rpx solid #f2ece1;
+}
+.next-top {
+  display: flex;
+  align-items: baseline;
+}
+.next-i {
+  font-size: 30rpx;
+}
+.next-n {
+  margin-left: 12rpx;
+  font-size: 27rpx;
+  font-weight: 600;
+  color: #221d18;
+}
+.next-p {
+  margin-left: auto;
+  font-size: 24rpx;
+  color: #e8674a;
+  font-weight: 700;
+}
+.next-bar {
+  margin-top: 14rpx;
+  height: 12rpx;
+  background: #efe8dd;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.next-in {
+  height: 100%;
+  background: #e8674a;
+  border-radius: 6rpx;
+  transition: width 0.25s ease;
+}
+.next-d {
+  margin-top: 12rpx;
+  font-size: 20rpx;
+  color: #b8ad9d;
+}
+.next-done {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f2ece1;
+  font-size: 22rpx;
+  color: #a89e8f;
+  text-align: center;
+}
+
+/* 习惯卡 */
+.list {
+  margin-top: 10rpx;
+}
+.habit {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 30rpx 28rpx;
+  margin-bottom: 18rpx;
+  box-shadow: 0 4rpx 16rpx rgba(120, 100, 70, 0.06);
+  transition: transform 0.12s ease;
+}
+.habit.done {
+  background: #fff5f1;
+}
+.h-icon {
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #ffffff;
+  flex: 0 0 auto;
+}
+.h-body {
+  flex: 1;
+  padding-left: 24rpx;
+}
+.h-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #221d18;
+}
+.habit.done .h-name {
+  color: #b08975;
+}
+.h-streak {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #a89e8f;
+}
+.h-check {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  border: 3rpx solid #e6ded2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #ffffff;
+  flex: 0 0 auto;
+}
+.h-check.on {
+  background: #e8674a;
+  border-color: #e8674a;
+}
+
+/* 空状态 */
+.empty {
+  text-align: center;
+  padding: 90rpx 0;
+}
+.empty-t {
+  font-size: 32rpx;
+  color: #221d18;
+}
+.empty-s {
+  margin-top: 12rpx;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
+.empty-btn {
+  display: inline-block;
+  margin-top: 36rpx;
+  padding: 22rpx 60rpx;
+  background: #e8674a;
+  color: #ffffff;
+  border-radius: 44rpx;
+  font-size: 27rpx;
+}
+
+.tip {
+  margin-top: 20rpx;
+  font-size: 21rpx;
+  color: #b8ad9d;
+  text-align: center;
+}
