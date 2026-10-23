@@ -1,0 +1,226 @@
+.page {
+  padding: 0 28rpx 40rpx;
+}
+
+.head {
+  padding: 44rpx 8rpx 26rpx;
+}
+.head-t {
+  font-size: 46rpx;
+  font-weight: 700;
+  letter-spacing: 3rpx;
+  color: #221d18;
+}
+.head-s {
+  margin-top: 10rpx;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
+
+/* 汇总 */
+.summary {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 30rpx 0;
+  margin-bottom: 26rpx;
+  box-shadow: 0 4rpx 16rpx rgba(120, 100, 70, 0.06);
+}
+.sum-i {
+  flex: 1;
+  text-align: center;
+}
+.sum-n {
+  font-size: 46rpx;
+  font-weight: 700;
+  color: #e8674a;
+}
+.sum-l {
+  display: block;
+  margin-top: 6rpx;
+  font-size: 21rpx;
+  color: #a89e8f;
+}
+.sum-div {
+  width: 1rpx;
+  height: 60rpx;
+  background: #f0e9de;
+}
+
+/* 单个习惯 */
+.item {
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 28rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(120, 100, 70, 0.06);
+}
+.it-head {
+  display: flex;
+  align-items: center;
+}
+.it-icon {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  color: #ffffff;
+  flex: 0 0 auto;
+}
+.it-body {
+  flex: 1;
+  padding-left: 20rpx;
+}
+.it-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #221d18;
+}
+.it-sub {
+  margin-top: 6rpx;
+  font-size: 21rpx;
+  color: #a89e8f;
+}
+.it-pct {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #e8674a;
+}
+
+/* 热力图 */
+.cal {
+  display: flex;
+  margin-top: 26rpx;
+  justify-content: space-between;
+}
+.cal-w {
+  display: flex;
+  flex-direction: column;
+}
+.cal-c {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 8rpx;
+  background: #f2ece3;
+  margin-bottom: 8rpx;
+}
+.cal-c:last-child {
+  margin-bottom: 0;
+}
+.cal-c.on {
+  /* 实际颜色由内联样式给，这里只保证没颜色时也有个默认 */
+  background: #e8674a;
+}
+.cal-c.fut {
+  background: transparent;
+  border: 1rpx dashed #e8e0d4;
+}
+.cal-c.today {
+  box-shadow: 0 0 0 3rpx rgba(232, 103, 74, 0.25);
+}
+
+.it-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f4efe7;
+  font-size: 21rpx;
+  color: #a89e8f;
+}
+
+.sample-note {
+  background: #fffaf3;
+  border: 1rpx solid #f0e6d6;
+  border-radius: 12rpx;
+  padding: 20rpx 22rpx;
+  margin-bottom: 20rpx;
+  font-size: 20rpx;
+  line-height: 1.7;
+  color: #a89e8f;
+}
+
+/* 成就墙 */
+.wall {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cell {
+  width: 48%;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 26rpx 22rpx 22rpx;
+  margin-bottom: 18rpx;
+  box-shadow: 0 4rpx 16rpx rgba(120, 100, 70, 0.06);
+  /* 未解锁的整体压暗，扫一眼就能分出「拿到了」和「还没有」 */
+  opacity: 0.5;
+  text-align: center;
+}
+.cell.on {
+  opacity: 1;
+  background: #fffaf6;
+}
+.cell-i {
+  font-size: 52rpx;
+  line-height: 1;
+}
+.cell-n {
+  margin-top: 14rpx;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #221d18;
+}
+.cell-d {
+  margin-top: 6rpx;
+  font-size: 19rpx;
+  line-height: 1.5;
+  color: #a89e8f;
+  min-height: 57rpx;
+}
+.cell-bar {
+  margin-top: 12rpx;
+  height: 10rpx;
+  background: #efe8dd;
+  border-radius: 5rpx;
+  overflow: hidden;
+}
+.cell-in {
+  height: 100%;
+  background: #e8674a;
+  border-radius: 5rpx;
+}
+.cell-t {
+  margin-top: 10rpx;
+  font-size: 19rpx;
+  color: #b8ad9d;
+}
+.cell-t.ok {
+  color: #4a9e6f;
+}
+
+.legend {
+  margin-top: 10rpx;
+  font-size: 21rpx;
+  line-height: 1.7;
+  color: #b8ad9d;
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  padding: 110rpx 0;
+}
+.empty-t {
+  font-size: 32rpx;
+  color: #221d18;
+}
+.empty-s {
+  margin-top: 12rpx;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
