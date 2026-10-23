@@ -1,0 +1,210 @@
+.page {
+  padding: 0 28rpx 40rpx;
+}
+
+.head {
+  padding: 44rpx 8rpx 26rpx;
+}
+.head-t {
+  font-size: 46rpx;
+  font-weight: 700;
+  letter-spacing: 3rpx;
+  color: #221d18;
+}
+.head-s {
+  margin-top: 10rpx;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
+
+/* 推荐习惯 */
+.cat-name {
+  font-size: 24rpx;
+  font-weight: 700;
+  letter-spacing: 2rpx;
+  color: #e8674a;
+  margin-bottom: 18rpx;
+}
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+}
+.preset {
+  width: 48%;
+  display: flex;
+  align-items: center;
+  background: #faf7f2;
+  border-radius: 12rpx;
+  padding: 14rpx 16rpx;
+  margin: 0 4% 14rpx 0;
+}
+.preset:nth-child(2n) {
+  margin-right: 0;
+}
+/* 已添加的整体压暗，一眼区分「能点的」和「已经有的」 */
+.preset.added {
+  opacity: 0.45;
+}
+.pre-icon {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: 14rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #ffffff;
+  flex: 0 0 auto;
+}
+.pre-name {
+  margin-left: 14rpx;
+  font-size: 23rpx;
+  color: #221d18;
+  flex: 1;
+}
+.pre-ok {
+  font-size: 22rpx;
+  color: #4a9e6f;
+  flex: 0 0 auto;
+}
+
+/* 已有习惯 */
+.item {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 16rpx;
+  padding: 24rpx 28rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 4rpx 16rpx rgba(120, 100, 70, 0.06);
+}
+.it-icon {
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #ffffff;
+  flex: 0 0 auto;
+}
+.it-name {
+  flex: 1;
+  padding-left: 22rpx;
+  font-size: 30rpx;
+  color: #221d18;
+}
+.it-del {
+  font-size: 24rpx;
+  color: #c4b8a6;
+  padding: 10rpx 16rpx;
+}
+
+.empty {
+  text-align: center;
+  padding: 50rpx 0;
+  font-size: 24rpx;
+  color: #b8ad9d;
+}
+
+/* 新建表单 */
+.name-input {
+  height: 88rpx;
+  background: #faf7f2;
+  border-radius: 12rpx;
+  padding: 0 24rpx;
+  font-size: 29rpx;
+  color: #221d18;
+}
+.ph {
+  color: #c4b8a6;
+}
+
+.fld-label {
+  margin: 30rpx 0 16rpx;
+  font-size: 23rpx;
+  color: #a89e8f;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ic {
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 20rpx;
+  background: #faf7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38rpx;
+  margin: 0 16rpx 16rpx 0;
+  border: 3rpx solid transparent;
+}
+.ic.on {
+  border-color: #e8674a;
+  background: #fff5f1;
+}
+
+.colors {
+  display: flex;
+}
+.cl {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 22rpx;
+  border: 4rpx solid transparent;
+}
+.cl.on {
+  border-color: #221d18;
+  box-shadow: 0 0 0 4rpx #ffffff inset;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  margin-top: 34rpx;
+  padding: 22rpx;
+  background: #faf7f2;
+  border-radius: 12rpx;
+}
+.pv-icon {
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 18rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #ffffff;
+}
+.pv-name {
+  padding-left: 22rpx;
+  font-size: 29rpx;
+  color: #221d18;
+}
+
+.add-btn {
+  margin-top: 30rpx;
+  height: 92rpx;
+  border-radius: 46rpx;
+  background: #e8674a;
+  color: #ffffff;
+  font-size: 30rpx;
+  font-weight: 600;
+  letter-spacing: 3rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip {
+  margin-top: 30rpx;
+  font-size: 21rpx;
+  line-height: 1.7;
+  color: #b8ad9d;
+  text-align: center;
+}

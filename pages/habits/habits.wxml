@@ -1,0 +1,70 @@
+<view class="page">
+
+  <view class="head">
+    <view class="head-t">习惯管理</view>
+    <view class="head-s">共 {{habits.length}} 个</view>
+  </view>
+
+  <view class="item" wx:for="{{habits}}" wx:key="id">
+    <view class="it-icon" style="background:{{item.color}}">{{item.icon}}</view>
+    <view class="it-name">{{item.name}}</view>
+    <view class="it-del" data-id="{{item.id}}" data-name="{{item.name}}" catchtap="remove">删除</view>
+  </view>
+
+  <view class="empty" wx:if="{{habits.length === 0}}">还没有习惯，从下面挑几个</view>
+
+  <!-- 推荐：点一下就能加，不用想也不用打字 -->
+  <view class="sec" wx:if="{{presetCats.length > 0}}">
+    <text class="sec-title">推荐习惯</text>
+    <text class="sec-more">点一下就能加</text>
+  </view>
+
+  <view class="card" wx:for="{{presetCats}}" wx:for-item="cat" wx:key="key">
+    <view class="cat-name">{{cat.name}}</view>
+    <view class="presets">
+      <view class="preset {{it.added ? 'added' : ''}}"
+            wx:for="{{cat.items}}" wx:for-item="it" wx:key="name"
+            data-name="{{it.name}}" bindtap="addPreset">
+        <view class="pre-icon" style="background:{{it.color}}">{{it.icon}}</view>
+        <text class="pre-name">{{it.name}}</text>
+        <text class="pre-ok" wx:if="{{it.added}}">✓</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 新建 -->
+  <view class="sec">
+    <text class="sec-title">自己写一个</text>
+  </view>
+
+  <view class="card">
+    <input class="name-input" placeholder="比如：早起、背 20 个单词"
+           placeholder-class="ph" value="{{name}}" maxlength="12" bindinput="onName" />
+
+    <view class="fld-label">图标</view>
+    <view class="icons">
+      <view class="ic {{icon === item ? 'on' : ''}}"
+            wx:for="{{icons}}" wx:key="*this"
+            data-v="{{item}}" bindtap="pickIcon">{{item}}</view>
+    </view>
+
+    <view class="fld-label">颜色</view>
+    <view class="colors">
+      <view class="cl {{color === item ? 'on' : ''}}"
+            wx:for="{{colors}}" wx:key="*this"
+            style="background:{{item}}" data-v="{{item}}" bindtap="pickColor"></view>
+    </view>
+
+    <view class="preview">
+      <view class="pv-icon" style="background:{{color}}">{{icon}}</view>
+      <view class="pv-name">{{name || '习惯名称'}}</view>
+    </view>
+
+    <view class="add-btn" bindtap="add">添加</view>
+  </view>
+
+  <view class="tip">
+    数据只存在本机。删掉小程序或清除缓存就没了。
+  </view>
+
+</view>
